@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trabajo 1 - Seres Angelicales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Reporte de Seres Angelicales (Polimorfismo)</h1>
+    <p>Estudiante: Andrés Eduardo Romero Cabrales</p>
+    
+    <ul>
+        <li th:each="mensaje : ${mensajes}" th:text="${mensaje}"></li>
+    </ul>
+</body>
+</html>
