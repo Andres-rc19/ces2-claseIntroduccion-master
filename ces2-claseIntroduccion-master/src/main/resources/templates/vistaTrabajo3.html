@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trabajo 3 - Colecciones y Function</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h1>Trabajo 3 - Colecciones, Enums y Function</h1>
+    <p><strong>Estudiante:</strong> Andrés Eduardo Romero Cabrales</p>
+    
+    <nav style="background-color: #e3f2fd; padding: 10px; margin-bottom: 20px;">
+        <strong>Menú: </strong>
+        <a href="/t3-punto2">Punto 2 (Iteradores)</a> | 
+        <a href="/t3-punto3">Punto 3 (Stream Deque)</a> | 
+        <a href="/t3-punto4">Punto 4 (Function)</a> | 
+        <a href="/t3-punto5">Punto 5 (verTotales)</a>
+    </nav>
+
+    <h2 th:text="${titulo != null ? titulo : 'Haz clic en las opciones del menú de arriba'}"></h2>
+
+    <h3 style="color: darkblue;" th:if="${resultadoTexto != null}" th:text="${resultadoTexto}"></h3>
+
+    <div th:if="${listaStack != null}">
+        <h4>Desde ListIterator (Stack):</h4>
+        <ul><li th:each="item : ${listaStack}" th:text="${item}"></li></ul>
+    </div>
+    
+    <div th:if="${listaDeque != null}">
+        <h4>Desde Iterator (Deque):</h4>
+        <ul><li th:each="item : ${listaDeque}" th:text="${item}"></li></ul>
+    </div>
+
+    <ul th:if="${listaResultados != null}">
+        <li th:each="item : ${listaResultados}" th:text="${item}"></li>
+    </ul>
+
+</body>
+</html>
